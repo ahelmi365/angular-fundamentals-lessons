@@ -10,16 +10,24 @@ import { AccountInfo } from './account-info';
       <p class="card-number">0000 0000 0000 0000</p>
       <section class="membership-info">
         <p>
-          <!-- name -->
-          {{ '' }}
+          {{ account.name }}
         </p>
-        <p>Valid Thru: {{ '' }}</p>
-        <p>CVV: {{ '' }}</p>
+        <p>Valid Thru: {{ account.validThru }}</p>
+        <p>CVV: {{ account.CVV }}</p>
         <p>
           <!-- membership status -->
-          <span class="badge gold">Gold</span>
-          <span class="badge platinum">Platinum</span>
-          <span class="badge silver">Silver</span>
+          <!-- @if (account.membershipStatus === "gold"){
+            <span class="badge gold">Gold</span>
+          }@else if(account.membershipStatus === "platinum"){
+            <span class="badge platinum">Platinum</span>
+          }@else if(account.membershipStatus === "silver"){
+            <span class="badge silver">Silver</span>
+          }@else {
+            <p>none</p>
+          } -->
+          <span class="badge {{ account.membershipStatus }}">{{
+            capetalizeFirstChar(account.membershipStatus)
+          }}</span>
         </p>
       </section>
     </article>
@@ -33,4 +41,7 @@ export class AppComponent {
     validThru: '12/2022',
     CVV: '123',
   };
+  capetalizeFirstChar(word: string) {
+    return `${word.charAt(0).toUpperCase()}${word.slice(1)}`;
+  }
 }
