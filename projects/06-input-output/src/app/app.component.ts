@@ -5,7 +5,7 @@ import { ListingComponent } from './listing/listing.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  template: ` <h1>Saved Cars {{ savedCarList.length }}</h1>
+  template: `<h1>Saved Cars {{ savedCarList.length }}</h1>
     <section class="container">
       @for (car of carList; track $index) {
       <app-listing [car]="car" />
