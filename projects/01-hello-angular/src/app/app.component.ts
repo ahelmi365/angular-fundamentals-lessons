@@ -9,7 +9,18 @@ import { RouterOutlet } from '@angular/router';
   template: `
     <h1>If you are reading this...</h1>
     <p>Things have worked out well! 🎉</p>
+    <h2>Hello {{ userName }}</h2>
+    <ol>
+      <li class="item">JavaScript</li>
+      <li class="item">TypeScript</li>
+      <li class="item">React</li>
+    </ol>
   `,
-  styles: ``,
+  styles: `
+  ol{
+    list-style-type: upper-roman;
+  }`,
 })
-export class AppComponent {}
+export class AppComponent {
+  userName: string = 'Ali Helmi';
+}
