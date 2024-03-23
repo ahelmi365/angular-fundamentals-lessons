@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ICarList } from './car-list';
+import { Car } from './car';
 
 @Component({
   selector: 'app-root',
@@ -42,7 +42,7 @@ import { ICarList } from './car-list';
   styleUrl: 'app.component.css',
 })
 export class AppComponent {
-  carList: ICarList[] = [
+  carList: Car[] = [
     {
       make: 'Foyoda',
       model: 'Famery',
