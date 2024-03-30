@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Car } from '../car';
 
@@ -37,11 +37,16 @@ import { Car } from '../car';
           <span>{{ car.price }}</span>
         </p>
       </section>
+      <button (click)="handleSaveCar()">Save Car</button>
     </article>
   `,
   styles: ``,
 })
 export class ListingComponent {
   @Input({ required: true }) car: Car = {} as Car;
-  constructor() {}
+  @Output() carSaved = new EventEmitter<Car>();
+
+  handleSaveCar() {
+    this.carSaved.emit(this.car);
+  }
 }
