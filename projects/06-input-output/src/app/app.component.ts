@@ -6,9 +6,13 @@ import { ListingComponent } from './listing/listing.component';
   selector: 'app-root',
   standalone: true,
   template: `<h1>Saved Cars {{ savedCarList.length }}</h1>
+    @for (savedCar of savedCarList; track savedCar){
+    <span>{{ savedCar.make }} </span>
+
+    }
     <section class="container">
-      @for (car of carList; track $index) {
-      <app-listing [car]="car" />
+      @for (carEntry of carList; track $index) {
+      <app-listing [car]="carEntry" (carSaved)="addCarToSaved($event)" />
       }@empty {
       <p>No Items...</p>
       }
@@ -52,4 +56,15 @@ export class AppComponent {
       transmission: 'Automatic',
     },
   ];
+
+  addCarToSaved(car: Car) {
+    console.log(car);
+    const isExist = this.savedCarList.find(
+      (currentCar) => currentCar.make === car.make
+    );
+
+    if (!isExist) {
+      this.savedCarList.push(car);
+    }
+  }
 }
