@@ -6,9 +6,11 @@ export const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
+    title:'App  Home Page'
   },
   {
     path: 'details/:id',
     component: DetailsComponent,
+    title:'App Details Page'
   },
 ];
