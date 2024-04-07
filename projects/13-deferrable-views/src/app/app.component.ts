@@ -8,8 +8,22 @@ import { PostsComponent } from './posts/posts.component';
   template: `
     <section class="container">
       <h1>Deferrable Views Example</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor maxime in nostrum? Corporis ex possimus blanditiis amet similique quo recusandae atque, eligendi veritatis magni veniam vitae. Veritatis sunt nesciunt laborum?</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor maxime in nostrum? Corporis ex possimus blanditiis amet similique quo recusandae atque, eligendi veritatis magni veniam vitae. Veritatis sunt nesciunt laborum?</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor maxime in nostrum? Corporis ex possimus blanditiis amet similique quo recusandae atque, eligendi veritatis magni veniam vitae. Veritatis sunt nesciunt laborum?</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor maxime in nostrum? Corporis ex possimus blanditiis amet similique quo recusandae atque, eligendi veritatis magni veniam vitae. Veritatis sunt nesciunt laborum?</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor maxime in nostrum? Corporis ex possimus blanditiis amet similique quo recusandae atque, eligendi veritatis magni veniam vitae. Veritatis sunt nesciunt laborum?</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor maxime in nostrum? Corporis ex possimus blanditiis amet similique quo recusandae atque, eligendi veritatis magni veniam vitae. Veritatis sunt nesciunt laborum?</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor maxime in nostrum? Corporis ex possimus blanditiis amet similique quo recusandae atque, eligendi veritatis magni veniam vitae. Veritatis sunt nesciunt laborum?</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor maxime in nostrum? Corporis ex possimus blanditiis amet similique quo recusandae atque, eligendi veritatis magni veniam vitae. Veritatis sunt nesciunt laborum?</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor maxime in nostrum? Corporis ex possimus blanditiis amet similique quo recusandae atque, eligendi veritatis magni veniam vitae. Veritatis sunt nesciunt laborum?</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor maxime in nostrum? Corporis ex possimus blanditiis amet similique quo recusandae atque, eligendi veritatis magni veniam vitae. Veritatis sunt nesciunt laborum?</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor maxime in nostrum? Corporis ex possimus blanditiis amet similique quo recusandae atque, eligendi veritatis magni veniam vitae. Veritatis sunt nesciunt laborum?</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor maxime in nostrum? Corporis ex possimus blanditiis amet similique quo recusandae atque, eligendi veritatis magni veniam vitae. Veritatis sunt nesciunt laborum?</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor maxime in nostrum? Corporis ex possimus blanditiis amet similique quo recusandae atque, eligendi veritatis magni veniam vitae. Veritatis sunt nesciunt laborum?</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor maxime in nostrum? Corporis ex possimus blanditiis amet similique quo recusandae atque, eligendi veritatis magni veniam vitae. Veritatis sunt nesciunt laborum?</p>
       <button #loadPosts>Load Posts</button>
-      @defer(on interaction(loadPosts)) {
+      @defer(on viewport) {
       <app-posts />
       } @loading {
       <p>Loading...</p>
