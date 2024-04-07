@@ -25,7 +25,7 @@ import { PostsComponent } from './posts/posts.component';
       <button #loadPosts>Load Posts</button>
       @defer(on viewport) {
       <app-posts />
-      } @loading {
+      } @loading (minimum 2s) {
       <p>Loading...</p>
       } @error {
         <p>Error!</p>
